@@ -1,0 +1,172 @@
+<div class="md:p-20 p-10 space-y-5">
+    <div class="flex justify-between items-center">
+        <h1 class="sm:text-3xl text-2xl font-semibold">Employee List</h1>
+        <div class="flex space-x-3">
+            <span class="p-input-icon-left ml-auto">
+                <input pInputText type="text" [(ngModel)]="searchTerm" (input)="searchEmployees()"
+                    placeholder="Search keyword" />
+            </span>
+            <p-button class="button-primary" label="" (click)="openAddEmployeeSidebar()">
+                <span class="pi pi-plus"></span>
+                <span class="hidden sm:inline">Tambah Employee</span>
+            </p-button>
+        </div>
+    </div>
+    <div class="">
+        <!-- Datatable -->
+        <p-table #listTab [value]="filteredEmployees" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]"
+            [tableStyle]="{ 'min-width': '120rem' }" styleClass="p-datatable-striped">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Username</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Birth Date</th>
+                    <th pSortableColumn="basicSalary">
+                        <div class="flex items-center gap-2">
+                            <p-sortIcon field="basicSalary"></p-sortIcon>
+                            Basic Salary
+                        </div>
+                    </th>
+                    <th pSortableColumn="Status">
+                        <div class="flex items-center gap-2">
+                            <p-sortIcon field="Status"></p-sortIcon>
+                            Status
+                        </div>
+                    </th>
+                    <th>Group</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-product>
+                <tr>
+                    <td>{{ product.username }}</td>
+                    <td>{{ product.firstName }}</td>
+                    <td>{{ product.lastName }}</td>
+                    <td>{{ product.email }}</td>
+                    <td>{{ product.birthDate }}</td>
+                    <td>{{ product.basicSalary }}</td>
+                    <td>{{ product.status }}</td>
+                    <td>{{ product.group }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>
+                        <div class="flex space-x-3">
+                            <button pButton icon="pi pi-pencil" class="p-button-edit"
+                                (click)="editProduct(product)"></button>
+                            <button pButton icon="pi pi-trash" class="p-button-delete"
+                                (click)="deleteProduct(product)"></button>
+                            <button pButton icon="pi pi-eye" class="p-button-info"
+                                (click)="viewProduct(product)"></button>
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+        <!-- Sidebar -->
+        <p-sidebar [(visible)]="showAddEmployeeSidebar" position="right">
+            <ng-template pTemplate="header">Tambah Employee</ng-template>
+            <div class="p-3 space-y-3">
+                <div class="grid sm:grid-cols-12 grid-cols-12 gap-3 text-sm" [formGroup]="userForm">
+                    <div class="sm:col-span-6 col-span-12">
+                        <label>Username</label>
+                        <input type="text" pInputText formControlName="username"
+                            [ngClass]="{ 'border-red-300': userForm.get('username')?.invalid }" />
+                        <small class="p-error block" *ngIf="userForm.get('username')?.hasError('required')">
+                            Username is required.
+                        </small>
+                    </div>
+                    <div class="sm:col-span-6 col-span-12">
+                        <label>First Name</label>
+                        <input class="p-inputtext" formControlName="firstName" ng type="text" pInputText
+                            [ngClass]="{ 'border-red-300': userForm.get('firstName')?.invalid }" />
+                        <small class="p-error block" *ngIf="userForm.get('firstName')?.hasError('required')">
+                            First Name is required.
+                        </small>
+                    </div>
+                    <div class="sm:col-span-6 col-span-12">
+                        <label>Last Name</label>
+                        <input class="p-inputtext" formControlName="lastName" ng type="text" pInputText
+                            [ngClass]="{ 'border-red-300': userForm.get('lastName')?.invalid }" />
+                        <small class="p-error block" *ngIf="userForm.get('lastName')?.hasError('required')">
+                            Last Name is required.
+                        </small>
+                    </div>
+                    <div class="sm:col-span-6 col-span-12">
+                        <label>Email</label>
+                        <input class="p-inputtext" formControlName="email" ng type="text" pInputText
+                            [ngClass]="{ 'border-red-300': userForm.get('email')?.invalid }" />
+                        <small class="p-error block" *ngIf="userForm.get('email')?.hasError('email')">
+                            Please enter a valid email address (e.g., user@example.com).
+                        </small>
+                    </div>
+                    <div class="sm:col-span-6 col-span-12">
+                        <label>Birth Date</label>
+                        <p-calendar formControlName="birthDate" [maxDate]="maxDate"
+                            [ngClass]="{ 'border-red-300': userForm.get('birthDate')?.invalid }"></p-calendar>
+                        <small class="p-error block" *ngIf="userForm.get('birthDate')?.hasError('required')">
+                            Birth Date is required.
+                        </small>
+                    </div>
+                    <div class="sm:col-span-6 col-span-12">
+                        <label>Basic Salary</label>
+                        <p-inputNumber [style]="{'width':'100%'}" [inputStyle]="{'width':'100%'}"
+                            formControlName="basicSalary" inputId="currency-id" mode="currency" currency="IDR"
+                            locale="id-ID" [minFractionDigits]="0" [maxFractionDigits]="0"
+                            [ngClass]="{ 'border-red-300': userForm.get('basicSalary')?.invalid }" />
+                        <small class="p-error block" *ngIf="userForm.get('basicSalary')?.hasError('required')">
+                            Basic Salary is required.
+                        </small>
+                    </div>
+                    <div class="sm:col-span-6 col-span-12">
+                        <label>Status</label>
+                        <p-dropdown [options]="statusOptions" formControlName="status" optionLabel="label"
+                            optionValue="value"
+                            [ngClass]="{ 'border-red-300': userForm.get('status')?.invalid }"></p-dropdown>
+                        <small class="p-error block" *ngIf="userForm.get('status')?.hasError('required')">
+                            Status is required.
+                        </small>
+                    </div>
+                    <div class="sm:col-span-6 col-span-12">
+                        <label>Group</label>
+                        <p-dropdown [options]="groupOptions" formControlName="group" optionLabel="label" [filter]="true"
+                            optionValue="value"
+                            [ngClass]="{ 'border-red-300': userForm.get('group')?.invalid }"></p-dropdown>
+                        <small class="p-error block" *ngIf="userForm.get('group')?.hasError('required')">
+                            Group is required.
+                        </small>
+                    </div>
+                    <div class="sm:col-span-12 col-span-12">
+                        <label>Description</label>
+                        <textarea class="p-inputtext h-[100px]" formControlName="description" ng type="text" pInputText
+                            [ngClass]="{ 'border-red-300': userForm.get('description')?.invalid }"></textarea>
+                        <small class="p-error block" *ngIf="userForm.get('description')?.hasError('required')">
+                            Description is required.
+                        </small>
+                    </div>
+                </div>
+                <div class=" space-x-3 flex justify-end">
+                    <p-button class="button-primary " label="Simpan" (click)="saveEmployee()"></p-button>
+                    <p-button class="button-secondary " (click)="closeAddEmployeeSidebar()" label="Batal"></p-button>
+                </div>
+            </div>
+        </p-sidebar>
+        <!-- Dialog -->
+        <p-dialog header="Data Information" [(visible)]="showInfoDialog" [modal]="true" [responsive]="true"
+            [style]="{width: '40vw'}">
+            <div class="p-3 md:grid md:grid-cols-2 md:gap-3 text-sm">
+                <span class="font-semibold">Username :</span> {{ editData?.username }}
+                <span class="font-semibold">First Name :</span> {{ editData?.firstName }}
+                <span class="font-semibold">Last Name :</span> {{ editData?.lastName }}
+                <span class="font-semibold">Email :</span> {{ editData?.email }}
+                <span class="font-semibold">Birth Date :</span> {{ editData?.birthDate }}
+                <span class="font-semibold">Basic Salary :</span> {{ editData?.basicSalary }}
+                <span class="font-semibold">Status :</span> {{ editData?.status }}
+                <span class="font-semibold">Group :</span> {{ editData?.group }}
+                <span class="font-semibold">Description :</span> {{ editData?.description }}
+            </div>
+        </p-dialog>
+
+    </div>
+</div>

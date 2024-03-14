@@ -1,0 +1,300 @@
+[
+    {
+      "username": "akbar",
+      "firstName": "Muh",
+      "lastName": "Akbar",
+      "email": "akbar@example.com",
+      "birthDate": "01/01/1990",
+      "basicSalary": 10000000,
+      "status": "active",
+      "group": "admin",
+      "description": "My admin account"
+    },
+    {
+      "username": "siti_nurhaliza",
+      "firstName": "Siti",
+      "lastName": "Nurhaliza",
+      "email": "siti.nurhaliza@example.com",
+      "birthDate": "12/31/1979",
+      "basicSalary": 8500000,
+      "status": "active",
+      "group": "manager",
+      "description": "Manager overseeing marketing team"
+    },
+    {
+      "username": "budi_susanto",
+      "firstName": "Budi",
+      "lastName": "Susanto",
+      "email": "budi.susanto@example.com",
+      "birthDate": "08/15/1985",
+      "basicSalary": 7200000,
+      "status": "active",
+      "group": "developer",
+      "description": "Full-stack developer with expertise in Java"
+    },
+    {
+      "username": "maria_fernandez",
+      "firstName": "Maria",
+      "lastName": "Fernandez",
+      "email": "maria.fernandez@example.com",
+      "birthDate": "05/20/1992",
+      "basicSalary": 6800000,
+      "status": "active",
+      "group": "designer",
+      "description": "Creative designer specializing in UI/UX"
+    },
+    {
+      "username": "chen_long",
+      "firstName": "Chen",
+      "lastName": "Long",
+      "email": "chen.long@example.com",
+      "birthDate": "11/19/1995",
+      "basicSalary": 5500000,
+      "status": "active",
+      "group": "customer support",
+      "description": "Customer support representative providing technical assistance"
+    },
+    {
+      "username": "anna_schmidt",
+      "firstName": "Anna",
+      "lastName": "Schmidt",
+      "email": "anna.schmidt@example.com",
+      "birthDate": "04/02/1988",
+      "basicSalary": 9200000,
+      "status": "active",
+      "group": "sales",
+      "description": "Top-performing sales representative with a strong track record"
+    },
+    {
+      "username": "hiro_suzuki",
+      "firstName": "Hiro",
+      "lastName": "Suzuki",
+      "email": "hiro.suzuki@example.com",
+      "birthDate": "09/27/1990",
+      "basicSalary": 8000000,
+      "status": "active",
+      "group": "marketing",
+      "description": "Digital marketing specialist responsible for social media campaigns"
+    },
+    {
+      "username": "elena_popova",
+      "firstName": "Elena",
+      "lastName": "Popova",
+      "email": "elena.popova@example.com",
+      "birthDate": "03/08/1982",
+      "basicSalary": 7500000,
+      "status": "active",
+      "group": "finance",
+      "description": "Experienced accountant managing company finances"
+    },
+    {
+      "username": "david_lee",
+      "firstName": "David",
+      "lastName": "Lee",
+      "email": "david.lee@example.com",
+      "birthDate": "07/14/1994",
+      "basicSalary": 6200000,
+      "status": "active",
+      "group": "content creator",
+      "description": "Skilled content creator crafting engagin"
+    },  
+  {
+    "username": "ayesha_khan",
+    "firstName": "Ayesha",
+    "lastName": "Khan",
+    "email": "ayesha.khan@example.com",
+    "birthDate": "10/26/1998",
+    "basicSalary": 5000000,
+    "status": "active",
+    "group": "human resources",
+    "description": "HR specialist handling recruitment and employee relations"
+  },
+  {
+    "username": "jean_pierre",
+    "firstName": "Jean",
+    "lastName": "Pierre",
+    "email": "jean.pierre@example.com",
+    "birthDate": "02/11/1980",
+    "basicSalary": 8700000,
+    "status": "active",
+    "group": "executive",
+    "description": "CEO leading the company's strategic direction"
+  },
+  {
+    "username": "fatima_diallo",
+    "firstName": "Fatima",
+    "lastName": "Diallo",
+    "email": "fatima.diallo@example.com",
+    "birthDate": "06/03/1991",
+    "basicSalary": 7000000,
+    "status": "active",
+    "group": "data analyst",
+    "description": "Data analyst extracting insights from company data"
+  },
+  {
+    "username": "gustavo_lopez",
+    "firstName": "Gustavo",
+    "lastName": "Lopez",
+    "email": "gustavo.lopez@example.com",
+    "birthDate": "12/09/1987",
+    "basicSalary": 6500000,
+    "status": "active",
+    "group": "quality assurance",
+    "description": "Quality assurance engineer ensuring product quality"
+  },
+  {
+    "username": "li_mei",
+    "firstName": "Li",
+    "lastName": "Mei",
+    "email": "li.mei@example.com",
+    "birthDate": "05/17/1996",
+    "basicSalary": 5200000,
+    "status": "active",
+    "group": "operations",
+    "description": "Operations specialist overseeing daily business processes"
+  },
+  {
+    "username": "michael_schmidt",
+    "firstName": "Michael",
+    "lastName": "Schmidt",
+    "email": "michael.schmidt@example.com",
+    "birthDate": "08/01/1978",
+    "basicSalary": 9000000,
+    "status": "active",
+    "group": "executive",
+    "description": "CFO managing company finances and investments"
+  },
+  {
+    "username": "kimiko_watanabe",
+    "firstName": "Kimiko",
+    "lastName": "Watanabe",
+    "email": "kimiko.watanabe@example.com",
+    "birthDate": "02/24/1993",
+    "basicSalary": 8300000,
+    "status": "active",
+    "group": "product manager",
+    "description": "Product manager responsible for product development and launch"
+  },
+  {
+    "username": "ivan_petrov",
+    "firstName": "Ivan",
+    "lastName": "Petrov",
+    "email": "ivan.petrov@example.com",
+    "birthDate": "07/12/1984",
+    "basicSalary": 7800000,
+    "status": "active",
+    "group": "security",
+    "description": "Security specialist ensuring data protection and network security"
+  },
+  {
+    "username": "maria_garcia",
+    "firstName": "Maria",
+    "lastName": "Garcia",
+    "email": "maria.garcia@example.com",
+    "birthDate": "01/06/1999",
+    "basicSalary": 5800000,
+    "status": "active",
+    "group": "intern",
+    "description": "Marketing intern assisting with marketing campaigns"
+  },
+    {
+      "username": "yasmin_ahmed",
+      "firstName": "Yasmin",
+      "lastName": "Ahmed",
+      "email": "yasmin.ahmed@example.com",
+      "birthDate": "04/18/2000",
+      "basicSalary": null,  # Include null value for optional field
+      "status": "onboarding",  # New status variation
+      "group": "sales",
+      "description": "Newly hired sales representative"
+    },
+    {
+      "username": "david_nguyen",
+      "firstName": "David",
+      "lastName": "Nguyen",
+      "email": "david.nguyen@example.com",
+      "birthDate": "11/07/1989",
+      "basicSalary": 6000000,
+      "status": "active",
+      "group": "software engineer",  # New group variation
+      "description": "Back-end developer specializing in Python"
+    },
+    {
+      "username": "isabella_rossi",
+      "firstName": "Isabella",
+      "lastName": "Rossi",
+      "email": "isabella.rossi@example.com",
+      "birthDate": "09/09/1997",
+      "basicSalary": 7300000,
+      "status": "active",
+      "group": "designer",
+      "description": "Graphic designer with expertise in branding"
+    },
+    {
+      "username": "christopher_lee",
+      "firstName": "Christopher",
+      "lastName": "Lee",
+      "email": "christopher.lee@example.com",
+      "birthDate": "03/05/1986",
+      "basicSalary": 8100000,
+      "status": "active",
+      "group": "marketing",
+      "description": "Marketing director leading marketing strategy"
+    },
+    {
+      "username": "amara_khan",
+      "firstName": "Amara",
+      "lastName": "Khan",
+      "email": "amara.khan@example.com",
+      "birthDate": "06/21/1992",
+      "basicSalary": 9500000,
+      "status": "active",
+      "group": "executive",
+      "description": "CTO leading product development"  # New role variation
+    },
+    {
+      "username": "antonio_hernandez",
+      "firstName": "Antonio",
+      "lastName": "Hernandez",
+      "email": "antonio.hernandez@example.com",
+      "birthDate": "12/25/1977",
+      "basicSalary": null,  # Include another null value
+      "status": "inactive",  # New status variation
+      "group": "manager",
+      "description": "Former manager (currently inactive)"
+    },
+    {
+      "username": "hanako_suzuki",
+      "firstName": "Hanako",
+      "lastName": "Suzuki",
+      "email": "hanako.suzuki@example.com",
+      "birthDate": "08/10/2001",
+      "basicSalary": 4800000,
+      "status": "active",
+      "group": "customer support",
+      "description": "Customer support representative (intern)"  # Combine role and status
+    },
+    {
+      "username": "emmanuel_blanc",
+      "firstName": "Emmanuel",
+      "lastName": "Blanc",
+      "email": "emmanuel.blanc@example.com",
+      "birthDate": "02/14/1990",
+      "basicSalary": 8800000,
+      "status": "active",
+      "group": "sales",
+      "description": "Top-performing sales representative exceeding targets"  # Add detail to description
+    },
+    {
+      "username": "fatima_abbas",
+      "firstName": "Fatima",
+      "lastName": "Abbas",
+      "email": "fatima.abbas@example.com",
+      "birthDate": "05/03/1995",
+      "basicSalary": 6300000,
+      "status": "active",
+      "group": "marketing",
+        "description": "Marketing specialist focusing on digital marketing"  # Add detail to description
+    }
+  
+]

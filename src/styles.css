@@ -1,0 +1,185 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import 'ngx-toastr/toastr';
+
+body {
+    font-family: 'Inter', sans-serif;
+  }
+
+.ng-invalid{
+  @apply border-red-500
+}
+  
+.p-inputtext {
+    @apply border border-gray-300 rounded-md p-1.5 w-full text-sm
+}
+
+.p-password-panel {
+    @apply border border-gray-300 rounded-md p-1.5 w-full text-sm
+}
+
+.button-primary {
+    @apply bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-md text-sm text-center cursor-pointer transition 
+}
+
+.button-secondary {
+    @apply bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded-md text-sm text-center cursor-pointer transition 
+}
+
+.p-button-edit {
+    @apply bg-yellow-400 hover:bg-yellow-500 text-white rounded-md text-sm py-1 text-center cursor-pointer transition 
+}
+
+.p-button-delete {
+    @apply bg-red-400 hover:bg-red-500 text-white rounded-md text-sm py-1 text-center cursor-pointer transition 
+}
+
+.p-button-info {
+    @apply bg-blue-400 hover:bg-blue-500 text-white rounded-md text-sm py-1 text-center cursor-pointer transition 
+}
+
+
+.p-datatable .p-datatable-thead > tr > th	{
+    @apply bg-gray-100 text-sm !important;
+}
+
+.p-datatable .p-datatable-tbody > tr{
+    @apply text-sm !important;
+}
+
+.p-sidebar {
+    @apply rounded-md md:w-[700px] w-full
+}
+
+.p-sidebar .p-sidebar-header {
+    @apply flex justify-between border-b
+}
+
+.p-dropdown {
+    @apply rounded-md  w-full text-sm border
+}
+
+.p-dropdown .p-dropdown-label{
+  @apply border-none
+}
+
+.p-calendar {
+    @apply rounded-md  w-full text-sm
+}
+
+.p-inputnumber{
+  display: grid
+    /* @apply rounded-md  w-full text-sm  grid */
+}
+
+p-inputnumber, .p-inputnumber{
+  display: grid
+    /* @apply rounded-md  w-full text-sm  grid */;
+}
+
+.p-paginator .p-dropdown {
+    @apply rounded-md  w-20 text-sm border h-9
+}
+
+.swal2-container {
+  z-index: 20000 !important;
+}
+
+.loader {
+    height: 7px;
+    width: 7px;
+    color: #93C5FD;
+    box-shadow: -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                -10px -10px 0 5px,
+                -10px -10px 0 5px;
+    animation: loader-38 4s infinite;
+  }
+
+  @keyframes loader-38 {
+    0% {
+      box-shadow: -10px -10px 0 5px,
+                  -10px -10px 0 5px,
+                  -10px -10px 0 5px,
+                  -10px -10px 0 5px;
+    }
+    8.33% {
+      box-shadow: -10px -10px 0 5px,
+                  10px -10px 0 5px,
+                  10px -10px 0 5px,
+                  10px -10px 0 5px;
+    }
+    16.66% {
+      box-shadow: -10px -10px 0 5px,
+                  10px -10px 0 5px,
+                  10px 10px 0 5px,
+                  10px 10px 0 5px;
+    }
+    24.99% {
+      box-shadow: -10px -10px 0 5px,
+                  10px -10px 0 5px,
+                  10px 10px 0 5px,
+                  -10px 10px 0 5px;
+    }
+    33.32% {
+      box-shadow: -10px -10px 0 5px,
+                  10px -10px 0 5px,
+                  10px 10px 0 5px,
+                  -10px -10px 0 5px;
+    }
+    41.65% {
+      box-shadow: 10px -10px 0 5px,
+                  10px -10px 0 5px,
+                  10px 10px 0 5px,
+                  10px -10px 0 5px;
+    }
+    49.98% {
+      box-shadow: 10px 10px 0 5px,
+                10px 10px 0 5px,
+                10px 10px 0 5px,
+                10px 10px 0 5px;
+    }
+    58.31% {
+      box-shadow: -10px 10px 0 5px,
+                  -10px 10px 0 5px,
+                  10px 10px 0 5px,
+                  -10px 10px 0 5px;
+    }
+    66.64% {
+      box-shadow: -10px -10px 0 5px,
+                  -10px -10px 0 5px,
+                  10px 10px 0 5px,
+                  -10px 10px 0 5px;
+    }
+    74.97% {
+      box-shadow: -10px -10px 0 5px,
+                  10px -10px 0 5px,
+                  10px 10px 0 5px,
+                  -10px 10px 0 5px;
+    }
+    83.3% {
+      box-shadow: -10px -10px 0 5px,
+                  10px 10px 0 5px,
+                  10px 10px 0 5px,
+                  -10px 10px 0 5px;
+    }
+    91.63% {
+      box-shadow: -10px -10px 0 5px,
+                  -10px 10px 0 5px,
+                  -10px 10px 0 5px,
+                  -10px 10px 0 5px;
+    }
+    100% {
+      box-shadow: -10px -10px 0 5px,
+                  -10px -10px 0 5px,
+                  -10px -10px 0 5px,
+                  -10px -10px 0 5px;
+    }
+  }
+

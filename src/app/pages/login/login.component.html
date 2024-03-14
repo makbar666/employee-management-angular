@@ -3,17 +3,17 @@
     <div class="col-span-full sm:col-span-6 md:h-screen h-full py-10 md:py-0 grid justify-items-center content-center">
         <img src="assets/svg/login.svg" alt="logo" class="w-1/2">
     </div>
-    <div
+    <div [formGroup]="loginForm"
         class="col-span-full sm:col-span-6 bg-white rounded-l-xl md:h-screen h-full py-10 md:py-0 grid content-center md:px-20 px-10 space-y-5">
         <div class="text-start">
             <h1 class="text-3xl">Selamat Datang</h1>
             <span class="text-gray-500 text-sm">Silahkan masuk untuk melanjutkan <span class="text-blue-500">Aplikasi
                     Employee Management</span></span>
         </div>
-        <input class="p-inputtext" [(ngModel)]="username" ng type="text" pInputText />
-        <p-password id="password1" type="password" class="w-full" [feedback]="false" placeholder="Password"
-            styleClass="p-password p-component p-inputwrapper p-input-icon-right" [style]="{'width':'100%'}"
-            [inputStyle]="{'width':'100%'}" [toggleMask]="true"></p-password>
+        <input placeholder="Username" class="p-inputtext" formControlName="username" ng type="text" pInputText />
+        <p-password formControlName="password" id="password1" type="password" class="w-full" [feedback]="false"
+            placeholder="Password" styleClass="p-password p-component p-inputwrapper p-input-icon-right"
+            [style]="{'width':'100%'}" [inputStyle]="{'width':'100%'}" [toggleMask]="true"></p-password>
         <p-button class="button-primary" label="Masuk" (click)="onLoginClick()"></p-button>
     </div>
 </div>
